@@ -1,0 +1,24 @@
+{"id": "123abc", "value": 31, "comment": "apple"}
+{"id": "1a", "value": 311, "comment": "biba"}
+{"id": "c", "value": 1.5, "comment": "bag"}
+
+###
+
+GET http://localhost:8088/transactions
+
+###
+
+POST http://localhost:8088/transactions
+Content-Type: application/json
+
+{"id": "c", "value": 1.5, "comment": "bag"}
+
+###
+
+GET http://localhost:8088/transactions/c
+
+###
+
+DELETE http://localhost:8088/transactions/c
+
+###

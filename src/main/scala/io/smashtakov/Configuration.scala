@@ -36,13 +36,17 @@ case class Configuration(routes: RoutesConfiguration, httpServer: HttpServerConf
 object RoutesConfiguration {
 
   def apply(config: Config): RoutesConfiguration = RoutesConfiguration(
-    path = stringGet("path", config),
+    transactionsPath = stringGet("transactions-path", config),
+    categoriesPath = stringGet("categories-path", config),
     timeout = durationGet("ask-timeout", config)
   )
 
 }
 
-case class RoutesConfiguration(path: String, timeout: JDuration)
+case class RoutesConfiguration(
+  transactionsPath: String,
+  categoriesPath: String,
+  timeout: JDuration)
 
 
 object HttpServerConfiguration {

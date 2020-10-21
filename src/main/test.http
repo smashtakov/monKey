@@ -1,6 +1,17 @@
-{"id": "123abc", "value": 31, "comment": "apple"}
-{"id": "1a", "value": 311, "comment": "biba"}
-{"id": "c", "value": 1.5, "comment": "bag"}
+{"id": "123abc", "value": 31, "date": "20201010", "comment": "apple"}
+{"id": "1a", "value": 311, "date": "20201019", "category": {"name": "Salary", "expense": false}}
+
+
+{
+  "id": "c",
+  "value": 1.5,
+  "date": "20201020",
+  "category": {
+    "name": "Food",
+    "expense": true
+  },
+  "comment": "bag"
+}
 
 ###
 
@@ -11,7 +22,7 @@ GET http://localhost:8088/transactions
 POST http://localhost:8088/transactions
 Content-Type: application/json
 
-{"id": "c", "value": 1.5, "comment": "bag"}
+{"id": "123abc", "value": 31, "date": "20201010", "comment": "apple"}
 
 ###
 
